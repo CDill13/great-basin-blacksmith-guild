@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-bottom: -4px;
+}
+
+.App-logo {
+  animation: marquee infinite 20s linear;
+  height: 80px;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes marquee {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

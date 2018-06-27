@@ -1,0 +1,28 @@
+.payments1Div{
+    padding-top: 55px;
+    background-color: #f8f8f8;
+}
+.paymentsTitleContainer{
+    text-shadow:
+    -.5px -.5px 0 #222,  
+     .5px -.5px 0 #222,
+     -.5px .5px 0 #222,
+      .5px .5px 0 #222;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: white;
+    background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Contrast-Wood.jpg");
+    background-size: cover;
+    background-color: black 10;
+}
+.linksContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}

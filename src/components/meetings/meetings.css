@@ -1,0 +1,41 @@
+.meetings1Div{ 
+    padding-top: 55px;
+    background-color: #f8f8f8;
+}
+.meetingsTitleContainer{
+    /* -webkit-text-stroke-width: .01px;
+    -webkit-text-stroke-color: black; */
+    text-shadow:
+    -.5px -.5px 0 #222,  
+     .5px -.5px 0 #222,
+     -.5px .5px 0 #222,
+      .5px .5px 0 #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    color: white;
+    background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Contrast-Wood.jpg");
+    background-size: cover;
+    background-color: black 10;
+}
+.meetingsBodyText{
+    padding: 25px;
+    font-family: Verdana sans-serif;
+    text-align: left;
+}
+.meetingsBodyText h1{
+    font-family: Lora;
+    margin: 5px 0 10px 0; 
+}
+.boldAndNormalTextInline{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* flex-wrap: wrap; */
+}
+.boldAndNormalTextInline b, p{
+    margin: 5px 0 0 0;
+    padding: 0;
+}

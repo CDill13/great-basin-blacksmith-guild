@@ -1,0 +1,37 @@
+.about1Div{ 
+    padding-top: 55px;
+    background-color: #f8f8f8;
+}
+.aboutTitleContainer{
+    text-shadow:
+    -.5px -.5px 0 #222,  
+     .5px -.5px 0 #222,
+     -.5px .5px 0 #222,
+      .5px .5px 0 #222;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px 0 50px;
+    min-height: 250px;
+    color: white;
+    background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Leaves-Wood.jpg");
+    background-size: cover;
+    background-color: black 10;
+}
+.aboutTitleContainer h1{
+    text-align: center;
+    /* height: 200px; */
+    margin: 0;
+    padding: 10px 0;
+    font-weight: bold;
+}
+.aboutBodyText{
+    padding: 0 25px 0 25px;
+    font-family: Verdana sans-serif;
+    text-align: left;
+}
+.abanaContainer{
+    background-image: "AbanaLogo.png"
+}

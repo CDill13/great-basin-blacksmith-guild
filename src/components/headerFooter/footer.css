@@ -1,0 +1,32 @@
+.footerContainer{
+    padding-bottom: 20px;
+    /* margin-bottom: 5px; */
+    background-color: #373737;
+}
+.footerContentContainer{
+    font-weight: bold;
+    padding-left: 20px;
+    height: 100%;
+    width: fit-content;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.footerContentContainer a{
+    color: white;
+    text-decoration: none;
+}
+.footerContainer a{
+    /* background-color: white; */
+    /* border-radius:  */
+    cursor: pointer;
+    width: fit-content;
+    padding: 0 0 20px 0;
+}
+.footerContainer img{
+    height: 40px;
+    width: 40px;
+    border-radius: 3px;
+    /* margin-bottom: -50px; */
+}
