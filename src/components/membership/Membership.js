@@ -11,7 +11,7 @@ export default function Membership(){
             <div className="loginContainer">
                 <h2>LOGIN OR CREATE AN ACCOUNT</h2>
                 <div className="linksContainer">
-                    <a className="blackButton" href="http://localhost:4200/auth/">Login / Register</a>
+                    <a className="blackButton" href={process.env.REACT_APP_LOGIN}>Login / Register</a>
                 </div>
             </div>
             <div className="membershipTextContainer">
