@@ -6,10 +6,10 @@ export default function Meetings(){
         <div className="meetings1Div">
             <div className="meetingsTitleContainer">
                 <h1>GBBG MEETINGS</h1>
-                <div className="lowermeetingsTitleContainer"><p>Scroll down the page to see all upcoming meetings<br/>Remember to bring your safety glasses to all meetings!</p></div>
-                <div>&nbsp;</div>
             </div>
             <div className="meetingsBodyText">
+                <h2 className="lowermeetingsTitleContainer"><p>Scroll down the page to see all upcoming meetings</p><p>Remember to bring your safety glasses to all meetings!</p></h2>
+                <div>&nbsp;</div>
                 <h1>JANUARY</h1>
                 <div className="boldAndNormalTextInline">
                     <b>Demonstrator:</b>&nbsp;&nbsp;

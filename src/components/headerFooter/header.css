@@ -73,3 +73,10 @@ a:hover{
     color: black;
     text-decoration: none;
 }
+.headterEmptyDiv{
+    height: 25px;
+    width: 25px;
+}
+.arrow{
+    cursor: pointer;
+}

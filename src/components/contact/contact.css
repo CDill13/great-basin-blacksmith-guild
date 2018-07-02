@@ -13,23 +13,35 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
+    min-height: 300px;
     color: white;
     background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Wood.jpg");
     background-size: cover;
     /* background-color: black 10; */
 }
 .contactContentContainer{
-    margin: 20px;
+    padding:  25px 250px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    align-self: center;
+    color: #494949;
+}
+.contact{
+    width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
     text-align: left;
-    color: #969696;
+}
+.constactInfo{
+    width: 200px;
+    margin: auto;
 }
 .contactContentContainer a{
-    color: #969696;
+    color: #494949;
     text-decoration: none;
     cursor: pointer;
 }

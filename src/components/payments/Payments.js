@@ -123,25 +123,25 @@ export default class Payments extends Component{
                         </div>
                         <div className="boldAndNormalTextInline">
                             <b>Fee:</b>&nbsp;
-                            <p>$5</p>
+                            <p>$5.00</p>
                         </div>
                         <div className="blackButtonContainer">
-                        {this.state.pillowForgingPaid ?(
-                            <b>You have paid for this event</b>
-                        ) :
-                        this.state.pillowForgingSelected ?
-                        <div>
-                            <p onClick={this.cancelPaymentSelection} className="blackButton">Nevermind</p>
-                            <StripeCheckout 
-                                className="stripeCheckout"
-                                token={this.onToken}
-                                stripeKey="pk_test_YNEj6SVPQwdwQ2IiTWAweyAK"
-                            /> 
-                        </div>
-                         :
-                         <p onClick={() => this.handlePaymentSelection("Pillow forging")} className="blackButton">Pay for Meeting</p>
+                            {this.state.pillowForgingPaid ?(
+                                <b>You have paid for this event</b>
+                            ) :
+                            this.state.pillowForgingSelected ?
+                            <div>
+                                <p onClick={this.cancelPaymentSelection} className="blackButton">Nevermind</p>
+                                <StripeCheckout 
+                                    className="stripeCheckout"
+                                    token={this.onToken}
+                                    stripeKey="pk_test_YNEj6SVPQwdwQ2IiTWAweyAK"
+                                /> 
+                            </div>
+                            :
+                            <p onClick={() => this.handlePaymentSelection("Pillow forging")} className="blackButton">Pay for Meeting</p>
 
-                        }
+                            }
                         </div>
                     </div>
                 </div>

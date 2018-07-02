@@ -31,8 +31,8 @@ export default class Header extends Component{
                 ?
                 <div className="headerNotNav">
                     <img alt="nav arrow" className="arrow" src={arrow} onClick={this.click}/>
-                    <h1>BUBU</h1>
-                    <div></div>
+                    <h1>GREAT BASIN BLACKSMITH GUILD</h1>
+                    <div className="headterEmptyDiv"></div>
                     {/* <Link className="search" to={{pathname: "/search"}}><img alt="search button" src={searchIcon}/></Link> */}
                 </div>
                 :

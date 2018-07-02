@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 200px;
+    min-height: 300px;
     color: white;
     background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Contrast-Wood.jpg");
     background-size: cover;
@@ -25,4 +25,22 @@
     justify-content: center;
     align-items: center;
     height: fit-content;
+}
+.paymentsBody{
+    display: flex;
+    flex-direction: column;
+    padding: 20px auto;
+    text-align: left;
+    margin: 0 auto;
+    /* align-self: center; */
+}
+.meetingContainer{
+    margin: 0 auto;
+    align-self: center;
+    width: 600px;
+}
+.blackButtonContainer b{
+    padding-left: 20px;
+    margin-right: auto;
+    /* margin-left: 20; */
 }

@@ -224,87 +224,111 @@ class Profile extends Component {
                 <div className="aboutTitleContainer">
                 <h1>GBBG PROFILE</h1>
             </div>
+            <br/>
+            <br/>
             <div className="blackButtonContainer">
             <Link onClick={() => axios.get(`/auth/logout`)} className="blackButton" to={{pathname: "/"}}> LOGOUT</Link>
-            {(this.state.membershipAge + 31536000000) > Date.now() ? <Link className="blackButton" to={{pathname: "/payments"}} >PAYMENTS</Link> : <div>
+            {(this.state.membershipAge + 31536000000) > Date.now() ? <Link className="blackButton" to={{pathname: "/payments"}} >PAYMENTS</Link>  : <div>
                     <p>Your membership is expired or you are not a member yet.</p><p>Become a member or renew your membership to manage meeting payments</p></div>}
                 
             </div>
+            <br/>
             <form className="profileForm">
                 <h2>Membership Form</h2>
-                <b>To become a member of the Great Basin Blacksmith Guild, or to renew your expired memebership, or simply update your information, fill out the following form and pay the membership fee if it is not currently up to date.</b>
-                    {/* <div>
-                        Date Created: {today}
-                        <input onChange={e => this.editInfo("today", e)} type="date" placeholder="MM/DD/YYYY"/> 
-                    </div> */}
-                    <div>
-                        Name: <input placeholder={this.state.name !== null ? this.state.name : "Your name"} onChange={e => this.editInfo("name", e)} type="text" maxLength="80"/>
-                        Home Phone: <input onChange={e => this.editInfo("phone_home", e)} placeholder={this.state.phone_home !== null ? this.state.phone_home : "(000) 000-0000"} type="tel" maxLength="15"/>
+                <b>&nbsp; To become a member of the Great Basin Blacksmith Guild, or to renew your expired memebership, or simply update your information, fill out the following form and pay the membership fee if it is not currently up to date.</b>
+                <br/>
+                <br/>
+                <div className="actualFormContainter">
+                    <div className="formRow">
+                        <div>
+                            Name: <input placeholder={this.state.name !== null ? this.state.name : "Your name"} onChange={e => this.editInfo("name", e)} type="text" maxLength="80"/>
+                        </div>
+                        <div>
+                            Home Phone: <input onChange={e => this.editInfo("phone_home", e)} placeholder={this.state.phone_home !== null ? this.state.phone_home : "(000) 000-0000"} type="tel" maxLength="15"/>
+                        </div>
                     </div>
-                    <div>
-                        Cell Phone: <input placeholder={this.state.phone_cell !== null ? this.state.phone_cell : "(000) 000-0000"} onChange={e => this.editInfo("phone_cell", e)} type="tel" maxLength="15"/>
-                        Email: <input onChange={e => this.editInfo("email", e)} placeholder={this.state.email !== null ? this.state.email : "your.email@something.com"} type="email" maxLength="64"/>
+                    <br/>
+                    <div className="formRow">
+                        <div>
+                            Cell Phone: <input placeholder={this.state.phone_cell !== null ? this.state.phone_cell : "(000) 000-0000"} onChange={e => this.editInfo("phone_cell", e)} type="tel" maxLength="15"/>
+                        </div>
+                        <div>
+                            Email: <input onChange={e => this.editInfo("email", e)} placeholder={this.state.email !== null ? this.state.email : "your.email@something.com"} type="email" maxLength="64"/>
+                        </div>
                     </div>
-                    <div>
-                        Address: <input onChange={e => this.editInfo("address", e)} placeholder={this.state.address !== null ? this.state.address : "1234 Street Name"} type="text" maxLength="128"/>
+                    <br/>
+                    <div className="formRow">
+                        <div>
+                           Address: <input onChange={e => this.editInfo("address", e)} placeholder={this.state.address !== null ? this.state.address : "1234 Street Name"} type="text" maxLength="128"/>
+                        </div>
+                        <div>
+                            City: <input onChange={e => this.editInfo("city", e)} placeholder="City name" type="text" maxLength="64"/>
+                        </div>
                     </div>
-                    City: <input onChange={e => this.editInfo("city", e)} placeholder="City name" type="text" maxLength="64"/>
-                    State: 
-                    <select onChange={e => this.editInfo("state", e)}>
-                        <option value="AL">Alabama</option>
-                        <option value="AK">Alaska</option>
-                        <option value="AZ">Arizona</option>
-                        <option value="AR">Arkansas</option>
-                        <option value="CA">California</option>
-                        <option value="CO">Colorado</option>
-                        <option value="CT">Connecticut</option>
-                        <option value="DE">Delaware</option>
-                        <option value="DC">District Of Columbia</option>
-                        <option value="FL">Florida</option>
-                        <option value="GA">Georgia</option>
-                        <option value="HI">Hawaii</option>
-                        <option value="ID">Idaho</option>
-                        <option value="IL">Illinois</option>
-                        <option value="IN">Indiana</option>
-                        <option value="IA">Iowa</option>
-                        <option value="KS">Kansas</option>
-                        <option value="KY">Kentucky</option>
-                        <option value="LA">Louisiana</option>
-                        <option value="ME">Maine</option>
-                        <option value="MD">Maryland</option>
-                        <option value="MA">Massachusetts</option>
-                        <option value="MI">Michigan</option>
-                        <option value="MN">Minnesota</option>
-                        <option value="MS">Mississippi</option>
-                        <option value="MO">Missouri</option>
-                        <option value="MT">Montana</option>
-                        <option value="NE">Nebraska</option>
-                        <option value="NV">Nevada</option>
-                        <option value="NH">New Hampshire</option>
-                        <option value="NJ">New Jersey</option>
-                        <option value="NM">New Mexico</option>
-                        <option value="NY">New York</option>
-                        <option value="NC">North Carolina</option>
-                        <option value="ND">North Dakota</option>
-                        <option value="OH">Ohio</option>
-                        <option value="OK">Oklahoma</option>
-                        <option value="OR">Oregon</option>
-                        <option value="PA">Pennsylvania</option>
-                        <option value="RI">Rhode Island</option>
-                        <option value="SC">South Carolina</option>
-                        <option value="SD">South Dakota</option>
-                        <option value="TN">Tennessee</option>
-                        <option value="TX">Texas</option>
-                        <option selected value="UT">Utah</option>
-                        <option value="VT">Vermont</option>
-                        <option value="VA">Virginia</option>
-                        <option value="WA">Washington</option>
-                        <option value="WV">West Virginia</option>
-                        <option value="WI">Wisconsin</option>
-                        <option value="WY">Wyoming</option>
-                    </select>				
-                    Zip: <input onChange={e => this.editInfo("zip", e)} placeholder="55555" type="text" maxLength="15"/>
-                    <div className="abanaDiv">
+                    <br/>
+                    <div className="formRow">
+                        <div>
+                            State: 
+                            <select onChange={e => this.editInfo("state", e)}>
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option selected value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </select>				
+                        </div>
+                        <div>
+                            Zip: <input onChange={e => this.editInfo("zip", e)} placeholder="55555" type="text" maxLength="15"/>
+                        </div>                    
+                    </div>
+                    <br/>
+                    <div className="formRow">
                         <div>
                             Are you an ABANA member? <select onChange={e => this.editInfo("abana_bool", e)}>
                                 <option selected="selected" value={false} >NO</option>
@@ -316,21 +340,35 @@ class Profile extends Component {
                             ABANA number: <input onChange={e => this.editInfo("abana_num", e)} placeholder="ABANA number" type="text" maxLength="32"/>
                         </div> : console.log() }
                     </div>
-                    How did you hear about GBBG? <select onChange={e => this.editInfo("referred_by", e)}>
-                        <option value="Referred by Member">Referred by Member</option>
-                        <option value="Internet Search">Internet Search</option>
-                        <option value="Flyer">Flyer</option>
-                        <option value="ABANA Newsletter">ABANA Newsletter</option>
-                        <option value="Other" >Other</option>
-                    </select>
-                    {this.state.referred_by === "Other" ? <div>Please Specify<input onChange={e => this.editInfo("other", e)} type="text" maxLength="128"/></div> : () => {} }
-                    <div>
-                        Select your membership type<br/>
-                        <select onChange={e => this.handleMembershipFee(e.target.value)}>
-                            <option selected value="Induvidual">Induvidual $20.00</option>
-                            <option value="Family">Family $30.00</option>
-                        </select>
+                    <br/>
+                    <div className="formRowLow">
+                        <div>
+                            How did you hear about GBBG? <select onChange={e => this.editInfo("referred_by", e)}>
+                                <option value="Referred by Member">Referred by Member</option>
+                                <option value="Internet Search">Internet Search</option>
+                                <option value="Flyer">Flyer</option>
+                                <option value="ABANA Newsletter">ABANA Newsletter</option>
+                                <option value="Other" >Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            {this.state.referred_by === "Other" ? <div>Please Specify &nbsp;<input onChange={e => this.editInfo("other", e)} type="text" maxLength="128"/></div> : () => {} }
+                        </div>
                     </div>
+                    <br/>
+                    <div className="formRowLow">
+                        <div>
+                            Select your membership type
+                            <select onChange={e => this.handleMembershipFee(e.target.value)}>
+                                <option selected value="Induvidual">Induvidual $20.00</option>
+                                <option value="Family">Family $30.00</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+
                 {this.state.requiredMet ? 
                     (this.state.membershipAge + 31536000000) < Date.now() ? 
                     <StripeCheckout
@@ -348,7 +386,10 @@ class Profile extends Component {
             </form>
             <div className="blackButtonContainer">
                 <p>Do you want to cancel your Great Basin Blacksmith Guild membership?</p>
+                <br/>
                 <p onClick={this.cancelMembership} className="blackButton">Cancel Membership</p>
+                <br/>
+                <br/>
             </div>
             </div>
             }

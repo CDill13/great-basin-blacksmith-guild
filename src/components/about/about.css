@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     padding: 0 50px 0 50px;
-    min-height: 250px;
+    min-height: 300px;
     color: white;
     background-image: url("http://cdn2.editmysite.com/images/editor/theme-background/stock/Leaves-Wood.jpg");
     background-size: cover;
@@ -28,7 +28,7 @@
     font-weight: bold;
 }
 .aboutBodyText{
-    padding: 0 25px 0 25px;
+    padding: 20px 150px 20px 150px;
     font-family: Verdana sans-serif;
     text-align: left;
 }
