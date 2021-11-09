@@ -1,7 +1,7 @@
 {
   "name": "great-basin-blacksmith-guild",
   "version": "0.1.0",
-  "homepage": "http://CDill13.github.io/great-basin-blacksmith-guild",
+  "homepage": "https://greatbasinblacksmithguild.com/",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
